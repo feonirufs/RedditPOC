@@ -14,23 +14,58 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        kotlinOptions {
+            jvmTarget = "1.8"
+        }
     }
 
     buildTypes {
-        release {
+        debug {
             minifyEnabled false
+            shrinkResources = false
+
+            buildConfigField(
+                    "String",
+                    "API_URL",
+                    "\"https://www.reddit.com/r\""
+            )
+        }
+        release {
+            minifyEnabled true
+            shrinkResources = true
+            debuggable = false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            buildConfigField(
+                    "String",
+                    "API_URL",
+                    "\"https://www.reddit.com/r\""
+            )
         }
     }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    //KT
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.3.5")
+    implementation("org.jetbrains.kotlinx:kotlinx-serialization-runtime:0.20.0")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.11.0")
+
+    //Android
     implementation 'androidx.core:core-ktx:1.3.0'
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
-    testImplementation 'junit:junit:4.12'
+
+    //Test
+    testImplementation 'junit:junit:4.13'
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.3.5")
+
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
 

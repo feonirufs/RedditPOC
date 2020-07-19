@@ -1,6 +1,6 @@
 package app.reddit_poc.api.response.topic
 
-import app.reddit_poc.domain.topic.Topic
+import app.reddit_poc.domain.topic.Post
 
 data class TopicPostDataResponse(
     val title: String = "",
@@ -14,7 +14,7 @@ data class TopicPostDataResponse(
 )
 
 //Maybe that`s better be an mapper
-internal fun TopicPostDataResponse.toDomainLayer() = Topic(
+internal fun TopicPostDataResponse.toDomainLayer() = Post(
     title = title,
     subredditNamePrefixed = subreddit_name_prefixed,
     downs = downs,

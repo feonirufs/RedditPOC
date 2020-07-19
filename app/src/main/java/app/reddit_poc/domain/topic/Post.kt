@@ -1,6 +1,6 @@
 package app.reddit_poc.domain.topic
 
-data class Topic(
+data class Post(
     val title: String,
     val subredditNamePrefixed: String = "",
     val downs: Int = 0,

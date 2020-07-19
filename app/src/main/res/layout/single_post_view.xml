@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/almostBlack">
+
+    <TextView
+        android:id="@+id/userDateTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="8dp"
+        tools:text="u/Donnutz . 4mo"
+        android:textSize="12sp"
+        android:textColor="@color/grayText"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/postTitleTx"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="#d3d4d6"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        tools:text="Live Thread sobre o Corona Vírus no Brasil!"
+        app:layout_constraintTop_toBottomOf="@id/userDateTx"
+        app:layout_constraintStart_toStartOf="@id/userDateTx"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icUpImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_up"
+        app:layout_constraintStart_toStartOf="@id/userDateTx"
+        app:layout_constraintTop_toBottomOf="@id/postTitleTx"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/upTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="518"
+        android:textSize="16sp"
+        android:textColor="@color/grayText"
+        app:layout_constraintTop_toTopOf="@id/icUpImg"
+        app:layout_constraintStart_toEndOf="@id/icUpImg"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icDownImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="22dp"
+        android:src="@drawable/ic_down"
+        app:layout_constraintStart_toEndOf="@id/upTx"
+        app:layout_constraintTop_toBottomOf="@id/postTitleTx"/>
+
+    <TextView
+        android:id="@+id/downTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="28"
+        android:textSize="16sp"
+        android:textColor="@color/grayText"
+        app:layout_constraintTop_toTopOf="@id/icUpImg"
+        app:layout_constraintStart_toEndOf="@id/icDownImg"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icCommentsImg"
+        android:layout_width="24dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="18dp"
+        android:src="@drawable/icon_baloon"
+        android:tint="#575757"
+        app:layout_constraintStart_toEndOf="@id/downTx"
+        app:layout_constraintTop_toBottomOf="@id/postTitleTx"/>
+
+    <TextView
+        android:id="@+id/commentsTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        tools:text="8"
+        android:textSize="16sp"
+        android:textColor="@color/grayText"
+        app:layout_constraintTop_toTopOf="@id/icUpImg"
+        app:layout_constraintStart_toEndOf="@id/icCommentsImg"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

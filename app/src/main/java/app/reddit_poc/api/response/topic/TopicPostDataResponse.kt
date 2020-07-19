@@ -9,8 +9,9 @@ data class TopicPostDataResponse(
     val ups: Int = 0,
     val num_comments: Int = 0,
     val author: String = "",
-    val created_utc: Double = 0.0,
-    val created: Double = 0.0
+    val created_utc: Float = 0f,
+    val created: Float = 0f,
+    val url: String
 )
 
 //Maybe that`s better be an mapper
@@ -22,5 +23,6 @@ internal fun TopicPostDataResponse.toDomainLayer() = Post(
     commentsCount = num_comments,
     author = author,
     createdUtc = created_utc,
-    created = created
+    created = created,
+    url = url
 )

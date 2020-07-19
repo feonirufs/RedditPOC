@@ -7,6 +7,7 @@ data class Post(
     val ups: Int = 0,
     val commentsCount: Int = 0,
     val author: String,
-    val createdUtc: Double,
-    val created: Double
+    val createdUtc: Float,
+    val created: Float,
+    val url: String
 )

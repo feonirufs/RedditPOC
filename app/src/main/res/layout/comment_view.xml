@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/almostBlack">
+
+    <TextView
+        android:id="@+id/userDateTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/divider"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Donnutz . 4mo" />
+
+    <TextView
+        android:id="@+id/commentBody"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/grayText"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/userDateTx"
+        app:layout_constraintTop_toBottomOf="@id/userDateTx"
+        tools:text="Live Thread sobre o Corona Vírus no Brasil!" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icUpImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/upTx"
+        app:layout_constraintTop_toBottomOf="@id/commentBody" />
+
+    <TextView
+        android:id="@+id/upTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/grayText"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@id/icDownImg"
+        app:layout_constraintTop_toTopOf="@id/icUpImg"
+        tools:text="518" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icDownImg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="8dp"
+        android:src="@drawable/ic_down"
+        app:layout_constraintEnd_toStartOf="@id/downTx"
+        app:layout_constraintTop_toBottomOf="@id/commentBody" />
+
+    <TextView
+        android:id="@+id/downTx"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:textColor="@color/grayText"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icUpImg"
+        tools:text="28" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="1dp"
+        android:layout_height="100dp"
+        android:background="@color/grayText"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

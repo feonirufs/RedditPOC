@@ -1,4 +1,4 @@
-package app.reddit_poc.ui.view
+package app.reddit_poc.ui.common
 
 import android.graphics.Rect
 import android.view.View

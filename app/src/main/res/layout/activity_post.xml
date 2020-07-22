@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#030303">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/postLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/almostBlack"
+                app:layout_collapseMode="parallax"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <TextView
+                    android:id="@+id/subRedditTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@color/primary"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="r/PersonalFinanceCanada" />
+
+                <TextView
+                    android:id="@+id/userDateTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:textColor="@color/grayText"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/subRedditTx"
+                    tools:text="posted by u/Donnutz . 4mo" />
+
+                <TextView
+                    android:id="@+id/postTitleTx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="normal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/userDateTx"
+                    app:layout_constraintTop_toBottomOf="@id/userDateTx"
+                    tools:text="Live Thread sobre o Corona Vírus no Brasil!" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_post_thumbnail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:adjustViewBounds="true"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/postTitleTx" />
+
+                <TextView
+                    android:id="@+id/postBodyTx"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:layout_marginEnd="20dp"
+                    android:textColor="@color/grayText"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/userDateTx"
+                    app:layout_constraintTop_toBottomOf="@id/postTitleTx"
+                    tools:text="Live Thread sobre o Corona Vírus no Brasil!" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icUpImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="10dp"
+                    android:src="@drawable/ic_up"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/userDateTx"
+                    app:layout_constraintTop_toBottomOf="@id/iv_post_thumbnail" />
+
+                <TextView
+                    android:id="@+id/upTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grayText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/icUpImg"
+                    app:layout_constraintTop_toTopOf="@id/icUpImg"
+                    tools:text="518" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icDownImg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="50dp"
+                    android:layout_marginTop="22dp"
+                    android:src="@drawable/ic_down"
+                    app:layout_constraintStart_toEndOf="@id/icUpImg"
+                    app:layout_constraintTop_toBottomOf="@id/iv_post_thumbnail" />
+
+                <TextView
+                    android:id="@+id/downTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grayText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/icDownImg"
+                    app:layout_constraintTop_toTopOf="@id/icUpImg"
+                    tools:text="28" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/icCommentsImg"
+                    android:layout_width="24dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginTop="18dp"
+                    android:src="@drawable/icon_baloon"
+                    android:tint="#575757"
+                    app:layout_constraintStart_toEndOf="@id/icDownImg"
+                    app:layout_constraintTop_toBottomOf="@id/iv_post_thumbnail" />
+
+                <TextView
+                    android:id="@+id/commentsTx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:textColor="@color/grayText"
+                    android:textSize="16sp"
+                    app:layout_constraintStart_toEndOf="@id/icCommentsImg"
+                    app:layout_constraintTop_toTopOf="@id/icUpImg"
+                    tools:text="8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/commentsRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="4dp"
+        android:layout_marginTop="20dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:listitem="@layout/comment_view" />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:indeterminateTint="@color/primary"
+        android:visibility="gone" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

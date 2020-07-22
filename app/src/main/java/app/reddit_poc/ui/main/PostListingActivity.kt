@@ -1,27 +1,28 @@
-package app.reddit_poc.ui
+package app.reddit_poc.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.view.Window
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
-import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import app.reddit_poc.R
 import app.reddit_poc.api.factory.RepositoryFactory
-import app.reddit_poc.domain.topic.Post
+import app.reddit_poc.domain.entity.Post
 import app.reddit_poc.presentation.TopicViewModel
+import app.reddit_poc.ui.common.MarginItemDecoration
+import app.reddit_poc.ui.post.PostActivity
 import app.reddit_poc.ui.state.UiState
-import app.reddit_poc.ui.view.MarginItemDecoration
 import kotlinx.android.synthetic.main.activity_main.*
 
 
-class MainActivity : AppCompatActivity() {
-    private val repository = RepositoryFactory.topicRepository()
+class PostListingActivity : AppCompatActivity() {
+    private val repository = RepositoryFactory.repository
     private val viewModel = TopicViewModel(repository)
 
-    private val postAdapter = PostAdapter()
+    private val postAdapter =
+        PostListingAdapter(::onPostClicked)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -42,6 +43,7 @@ class MainActivity : AppCompatActivity() {
                         onNewData(this.data)
                     }
                     is UiState.Error -> {
+                        hideLoading()
                         showToastError(this.error)
                     }
                 }
@@ -53,6 +55,14 @@ class MainActivity : AppCompatActivity() {
 
     private fun onNewData(posts: List<Post>) {
         postAdapter.list = posts
+    }
+
+    private fun onPostClicked(url: String) {
+        val intent = Intent(this, PostActivity::class.java).apply {
+            putExtra("url", url)
+        }
+        startActivity(intent)
+
     }
 
     private fun setupPostRecycler() {

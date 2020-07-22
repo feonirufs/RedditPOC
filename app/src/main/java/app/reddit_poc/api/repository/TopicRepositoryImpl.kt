@@ -2,7 +2,9 @@ package app.reddit_poc.api.repository
 
 import app.reddit_poc.api.response.topic.toDomainLayer
 import app.reddit_poc.api.service.RedditService
-import app.reddit_poc.domain.topic.Post
+import app.reddit_poc.domain.entity.Post
+import app.reddit_poc.domain.entity.PostFullPage
+import app.reddit_poc.domain.mapper.toDomain
 import app.reddit_poc.domain.topic.TopicRepository
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
@@ -20,6 +22,14 @@ class TopicRepositoryImpl(private val webService: RedditService) : TopicReposito
                 .children
                 .map { it.data.toDomainLayer() }
 
+            emit(data)
+        }.flowOn(Dispatchers.IO)
+    }
+
+    override fun getFullPostData(postLink: String): Flow<PostFullPage> {
+        return flow {
+            val data = webService.getSinglePostData(postUrl = postLink, raw_json = 1)
+                .toDomain()
             emit(data)
         }.flowOn(Dispatchers.IO)
     }

@@ -5,7 +5,9 @@ import app.reddit_poc.domain.topic.TopicRepository
 
 object RepositoryFactory {
 
-    fun topicRepository(): TopicRepository {
+    val repository by lazy { topicRepository() }
+
+    private fun topicRepository(): TopicRepository {
         val webService = WebServiceFactory.webService
         return TopicRepositoryImpl(webService)
     }

@@ -11,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="14dp"
         tools:text="u/Donnutz . 4mo"
         android:textSize="12sp"
         android:textColor="@color/grayText"
@@ -32,69 +32,95 @@
         app:layout_constraintStart_toStartOf="@id/userDateTx"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <TextView
+        android:id="@+id/postBodyTx"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="20dp"
+        android:textColor="@color/grayText"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/userDateTx"
+        app:layout_constraintTop_toBottomOf="@id/postTitleTx"
+        tools:text="Live Thread sobre o Corona Vírus no Brasil!" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_post_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:visibility="visible"
+        android:adjustViewBounds="true"
+        app:layout_constraintTop_toBottomOf="@id/postTitleTx"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icUpImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
         android:layout_marginTop="20dp"
+        android:layout_marginBottom="10dp"
         android:src="@drawable/ic_up"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@id/userDateTx"
-        app:layout_constraintTop_toBottomOf="@id/postTitleTx"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/iv_post_thumbnail" />
 
     <TextView
         android:id="@+id/upTx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        tools:text="518"
-        android:textSize="16sp"
         android:textColor="@color/grayText"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icUpImg"
         app:layout_constraintTop_toTopOf="@id/icUpImg"
-        app:layout_constraintStart_toEndOf="@id/icUpImg"/>
+        tools:text="518" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icDownImg"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="22dp"
         android:src="@drawable/ic_down"
-        app:layout_constraintStart_toEndOf="@id/upTx"
-        app:layout_constraintTop_toBottomOf="@id/postTitleTx"/>
+        app:layout_constraintStart_toEndOf="@id/icUpImg"
+        app:layout_constraintTop_toBottomOf="@id/iv_post_thumbnail" />
 
     <TextView
         android:id="@+id/downTx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        tools:text="28"
-        android:textSize="16sp"
         android:textColor="@color/grayText"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icDownImg"
         app:layout_constraintTop_toTopOf="@id/icUpImg"
-        app:layout_constraintStart_toEndOf="@id/icDownImg"/>
+        tools:text="28" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/icCommentsImg"
         android:layout_width="24dp"
         android:layout_height="30dp"
-        android:layout_marginStart="68dp"
+        android:layout_marginStart="80dp"
         android:layout_marginTop="18dp"
         android:src="@drawable/icon_baloon"
         android:tint="#575757"
-        app:layout_constraintStart_toEndOf="@id/downTx"
-        app:layout_constraintTop_toBottomOf="@id/postTitleTx"/>
+        app:layout_constraintStart_toEndOf="@id/icDownImg"
+        app:layout_constraintTop_toBottomOf="@id/iv_post_thumbnail" />
 
     <TextView
         android:id="@+id/commentsTx"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        tools:text="8"
-        android:textSize="16sp"
         android:textColor="@color/grayText"
+        android:textSize="16sp"
+        app:layout_constraintStart_toEndOf="@id/icCommentsImg"
         app:layout_constraintTop_toTopOf="@id/icUpImg"
-        app:layout_constraintStart_toEndOf="@id/icCommentsImg"/>
+        tools:text="8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

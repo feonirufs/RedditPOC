@@ -21,15 +21,18 @@ class TopicViewModel(private val topicRepository: TopicRepository) : ViewModel()
     private val _postUiState = MutableLiveData<UiState<PostFullPage>>()
     val postUiState: LiveData<UiState<PostFullPage>> get() = _postUiState
 
+    private var after: String = ""
+
     fun getTopic() {
         viewModelScope.launch {
-            topicRepository.getAllPostsInTopic()
+            topicRepository.getAllPostsInTopic(after = after)
                 .onStart { _uiState.value = UiState.Loading() }
                 .catch {
                     _uiState.value = UiState.Error("Nao foi possível carregar os posts!")
                 }
                 .collect { postList ->
                     _uiState.value = UiState.Data(postList)
+                    after = postList.last().after?: ""
                 }
         }
     }

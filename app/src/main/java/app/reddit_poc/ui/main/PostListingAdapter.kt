@@ -12,11 +12,7 @@ import com.bumptech.glide.request.target.Target.SIZE_ORIGINAL
 import kotlinx.android.synthetic.main.single_post_view.view.*
 
 class PostListingAdapter(private val clickCallback: (String.() -> Unit)) : RecyclerView.Adapter<PostListingAdapter.ViewHolder>() {
-    var list: List<Post> = emptyList()
-        set(value) {
-            field = value
-            notifyDataSetChanged()
-        }
+    var list= mutableListOf<Post>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)
@@ -29,6 +25,13 @@ class PostListingAdapter(private val clickCallback: (String.() -> Unit)) : Recyc
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(list[position], clickCallback)
+    }
+
+    fun updatePosts(posts: List<Post>) {
+        with(list) {
+            addAll(posts)
+        }
+        notifyDataSetChanged()
     }
 
     inner class ViewHolder (view: View): RecyclerView.ViewHolder(view) {

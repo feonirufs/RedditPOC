@@ -86,5 +86,6 @@ internal fun RedditData.toPost() =
         createdUtc = created_utc?: 0L,
         created = created?: 0L,
         url = "$permalink.json",
-        thumbnail = url_overridden_by_dest
+        thumbnail = url_overridden_by_dest,
+        after = ""
     )

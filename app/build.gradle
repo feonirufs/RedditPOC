@@ -18,6 +18,16 @@ android {
 
         kotlinOptions {
             jvmTarget = "1.8"
+
+            freeCompilerArgs += [
+                    "-Xuse-experimental=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                    "-Xuse-experimental=kotlinx.coroutines.ObsoleteCoroutinesApi"
+            ]
+        }
+
+        packagingOptions {
+            exclude 'META-INF/AL2.0'
+            exclude("META-INF/LGPL2.1")
         }
     }
 

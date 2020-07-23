@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import app.reddit_poc.R
 import app.reddit_poc.api.factory.RepositoryFactory
 import app.reddit_poc.domain.entity.Post
@@ -54,7 +55,7 @@ class PostListingActivity : AppCompatActivity() {
     }
 
     private fun onNewData(posts: List<Post>) {
-        postAdapter.list = posts
+        postAdapter.updatePosts(posts)
     }
 
     private fun onPostClicked(url: String) {
@@ -62,7 +63,6 @@ class PostListingActivity : AppCompatActivity() {
             putExtra("url", url)
         }
         startActivity(intent)
-
     }
 
     private fun setupPostRecycler() {
@@ -70,17 +70,25 @@ class PostListingActivity : AppCompatActivity() {
             layoutManager = LinearLayoutManager(context)
             adapter = postAdapter
             addItemDecoration(MarginItemDecoration(resources.getDimension(R.dimen.recycler_post_margin).toInt()))
+            addOnScrollListener(object: RecyclerView.OnScrollListener() {
+                override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
+                    super.onScrollStateChanged(recyclerView, newState)
+                    if (!recyclerView.canScrollVertically(1)) {
+                        viewModel.getTopic()
+                    }
+                }
+            })
         }
     }
 
     private fun showLoading() {
         loading.visibility = View.VISIBLE
-        recyclerPost.visibility = View.GONE
+        //recyclerPost.visibility = View.GONE
     }
 
     private fun hideLoading() {
         loading.visibility = View.GONE
-        recyclerPost.visibility = View.VISIBLE
+        //recyclerPost.visibility = View.VISIBLE
     }
 
     private fun showToastError(msg: String) {

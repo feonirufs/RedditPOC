@@ -8,7 +8,10 @@ import retrofit2.http.Query
 
 interface RedditService {
     @GET("/r/brasil.json")
-    suspend fun getTopicData(): TopicResponse
+    suspend fun getTopicData(
+        @Query("limit") limit: Int = 3,
+        @Query("after") after: String?
+    ): TopicResponse
 
     @GET("{postUrl}")
     suspend fun getSinglePostData(@Path("postUrl", encoded = true) postUrl: String, @Query("raw_json") raw_json: Int): List<CommentResponse>

@@ -29,5 +29,6 @@ internal fun TopicPostDataResponse.toDomainLayer() =
         createdUtc = created_utc,
         created = created,
         url = "$permalink.json",
-        thumbnail = url
+        thumbnail = url,
+        after = ""
     )

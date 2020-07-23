@@ -13,5 +13,6 @@ import kotlinx.serialization.Serializable
     val createdUtc: Long,
     val created: Long,
     val url: String,
-    val thumbnail: String?
+    val thumbnail: String?,
+    var after: String?
 )

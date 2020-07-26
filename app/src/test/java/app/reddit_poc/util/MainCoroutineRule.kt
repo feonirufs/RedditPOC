@@ -2,7 +2,6 @@ package app.reddit_poc.util
 
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.runBlockingTest
@@ -25,9 +24,7 @@ class MainCoroutineRule(
         Dispatchers.resetMain()
         testDispatcher.cleanupTestCoroutines()
     }
-}
 
-@ExperimentalCoroutinesApi
-fun MainCoroutineRule.runBlocking(block: suspend (CoroutineScope) -> Unit) = this.testDispatcher.runBlockingTest {
-    block(this)
+    inline fun runBlockingTest(crossinline block: () -> Unit) =
+        this.testDispatcher.runBlockingTest { block() }
 }

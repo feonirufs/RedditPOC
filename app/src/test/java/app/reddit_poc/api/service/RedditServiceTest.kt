@@ -2,6 +2,7 @@ package app.reddit_poc.api.service
 
 import app.reddit_poc.api.response.post.CommentResponse
 import app.reddit_poc.api.response.topic.TopicResponse
+import app.reddit_poc.util.FakeWebServiceFactory
 import app.reddit_poc.util.asJson
 import assertk.assertThat
 import assertk.assertions.isEqualTo
@@ -24,7 +25,7 @@ class RedditServiceTest {
 
     //That`s could be better
     @Test
-    fun shouldReturnNullWhenApiReturnsNothing() {
+    fun `should return null when api returns nothing`() {
         runBlocking {
             val responseData = "/fake-response/post-empty-list.json".asJson()
 
@@ -33,33 +34,14 @@ class RedditServiceTest {
                 .setBody(responseData)
             mockWebServer.enqueue(response)
 
-
-            val postListing = apiService.getTopicData(after = null)
-
+            val postListing = apiService.getTopicData(limit = 10, after = null)
 
             assertThat(postListing.data).isNull()
         }
     }
 
-   /* @Test
-    fun shouldReturnOnly3PostWhenLimitFieldIs3() {
-        runBlocking {
-            //Given
-            //I Want the real behavior from API
-            val privateMockWebServer = MockWebServer()
-            privateMockWebServer.start()
-            privateMockWebServer.url(API_URL)
-
-            //When
-            val postListing = apiService.getTopicData(limit = 3, after = null)
-
-            //Assert
-            assertThat(postListing.data?.children?.size).isEqualTo(3)
-        }
-    }*/
-
     @Test
-    fun shouldReturnTopicResponseWhenApiReturnsData() {
+    fun `should return TopicResponse when api returns data`() {
         runBlocking {
             val responseData = "/fake-response/post-list.json".asJson()
 
@@ -68,7 +50,7 @@ class RedditServiceTest {
                 .setBody(responseData)
             mockWebServer.enqueue(response)
 
-            val postListingResult = apiService.getTopicData(after = null)
+            val postListingResult = apiService.getTopicData(limit = 10, after = null)
 
             val adapter: JsonAdapter<TopicResponse> = moshi.adapter(TopicResponse::class.java)
             val expected = adapter.fromJson(responseData)
@@ -78,7 +60,7 @@ class RedditServiceTest {
     }
 
     @Test
-    fun shouldReturnEmptyListOfCommentsWhenPostHasNoComments() {
+    fun `should return empty list of comments when post has no comments`() {
         runBlocking {
             val responseData = "/fake-response/post-with-no-comments.json".asJson()
 
@@ -94,7 +76,7 @@ class RedditServiceTest {
     }
 
     @Test
-    fun shouldReturnPostWithWhenPostHasComments() {
+    fun `should return post with comments when post has comments`() {
         runBlocking {
             val responseData = "/fake-response/post-with-comments.json".asJson()
 

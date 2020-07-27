@@ -2,48 +2,47 @@ package app.reddit_poc.presentation
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.ViewModel
-import androidx.lifecycle.viewModelScope
-import app.reddit_poc.domain.entity.Post
-import app.reddit_poc.domain.entity.PostFullPage
 import app.reddit_poc.domain.topic.TopicRepository
 import app.reddit_poc.ui.state.UiState
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.onStart
-import kotlinx.coroutines.launch
 
-class TopicViewModel(private val topicRepository: TopicRepository) : ViewModel() {
+class TopicViewModel(private val topicRepository: TopicRepository) : CoroutinesViewModel() {
 
-    private val _uiState = MutableLiveData<UiState<List<Post>>>()
-    val uiState: LiveData<UiState<List<Post>>> get() = _uiState
+    private val _topicUiState = MutableLiveData<UiState>()
+    val topicUiState: LiveData<UiState> get() = _topicUiState
 
-    private val _postUiState = MutableLiveData<UiState<PostFullPage>>()
-    val postUiState: LiveData<UiState<PostFullPage>> get() = _postUiState
+    private val _postUiState = MutableLiveData<UiState>()
+    val postUiState: LiveData<UiState> get() = _postUiState
 
     private var after: String = ""
+    private var isFetching: Boolean = false
 
-    fun getTopic() {
-        viewModelScope.launch {
-            topicRepository.getAllPostsInTopic(after = after)
-                .onStart { _uiState.value = UiState.Loading() }
-                .catch {
-                    _uiState.value = UiState.Error("Nao foi possível carregar os posts!")
-                }
-                .collect { postList ->
-                    _uiState.value = UiState.Data(postList)
-                    after = postList.last().after?: ""
-                }
+    fun getPostsFromTopic() {
+        if (!isFetching) {
+            isFetching = true
+            launch {
+                topicRepository.getAllPostsInTopic(after = after)
+                    .onStart { _topicUiState.value = UiState.Loading }
+                    .catch {
+                        _topicUiState.value = UiState.Error("Não consegui carregar nenhum post :(")
+                    }
+                    .collect { postList ->
+                        _topicUiState.value = UiState.Data(postList)
+                        after = postList.last().after ?: ""
+                        isFetching = false
+                    }
+            }
         }
     }
 
     fun getFullPost(postUrl: String) {
-        viewModelScope.launch {
+        launch {
             topicRepository.getFullPostData(postUrl)
-                .onStart { _postUiState.value = UiState.Loading() }
-                .catch { e ->
-                    e.printStackTrace()
-                    _postUiState.value = UiState.Error("Nao foi possível carregar os posts!")
+                .onStart { _postUiState.value = UiState.Loading }
+                .catch {
+                    _postUiState.value = UiState.Error("Não consegui carregar nenhum post :(")
                 }
                 .collect { fullPost ->
                     _postUiState.value = UiState.Data(fullPost)

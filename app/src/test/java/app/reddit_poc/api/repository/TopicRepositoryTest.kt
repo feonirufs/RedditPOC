@@ -10,7 +10,7 @@ import app.reddit_poc.domain.topic.TopicRepository
 import app.reddit_poc.util.MainCoroutineRule
 import app.reddit_poc.util.PostFactory.onePost
 import app.reddit_poc.util.PostFactory.threePosts
-import app.reddit_poc.util.asJson
+import app.reddit_poc.util.toJson
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import com.squareup.moshi.JsonAdapter
@@ -27,8 +27,6 @@ import org.junit.Test
 class TopicRepositoryTest {
     @get:Rule
     val rule = MainCoroutineRule()
-
-    private val coroutineScope = rule.testScope
 
     private val moshi: Moshi = Moshi.Builder().build()
 
@@ -60,7 +58,7 @@ class TopicRepositoryTest {
 
     @Test
     fun `should return list of one Post if limit passed to api is 1`() = runBlocking {
-        val json = "/fake-response/one-post-list.json".asJson()
+        val json = "/fake-response/one-post-list.json".toJson()
         val adapter: JsonAdapter<TopicResponse> = moshi.adapter(TopicResponse::class.java)
         val topicResponse = adapter.fromJson(json)!!
 
@@ -83,7 +81,7 @@ class TopicRepositoryTest {
 
     @Test
     fun `should return list of Post when api return data`() = runBlocking {
-        val json = "/fake-response/post-list.json".asJson()
+        val json = "/fake-response/post-list.json".toJson()
         val adapter: JsonAdapter<TopicResponse> = moshi.adapter(TopicResponse::class.java)
         val topicResponse = adapter.fromJson(json)!!
 
@@ -105,7 +103,7 @@ class TopicRepositoryTest {
 
     @Test
     fun `should return empty list of comments if api does not return comments`() = runBlocking {
-        val json = "/fake-response/post-with-no-comments.json".asJson()
+        val json = "/fake-response/post-with-no-comments.json".toJson()
         val type = Types.newParameterizedType(
             List::class.java,
             CommentResponse::class.java
@@ -131,7 +129,7 @@ class TopicRepositoryTest {
 
     @Test
     fun `should return post with comments if api return comments`() = runBlocking {
-        val json = "/fake-response/post-with-comments.json".asJson()
+        val json = "/fake-response/post-with-comments.json".toJson()
         val type = Types.newParameterizedType(
             List::class.java,
             CommentResponse::class.java

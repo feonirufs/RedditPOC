@@ -1,6 +1,5 @@
 package app.reddit_poc.util
 
-import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.TestCoroutineDispatcher
 import kotlinx.coroutines.test.resetMain
@@ -12,7 +11,6 @@ import org.junit.runner.Description
 class MainCoroutineRule(
     val testDispatcher: TestCoroutineDispatcher = TestCoroutineDispatcher()
 ): TestWatcher() {
-    val testScope = CoroutineScope(testDispatcher)
 
     override fun starting(description: Description?) {
         super.starting(description)

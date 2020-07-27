@@ -1,0 +1,955 @@
+[
+   {
+      "kind":"Listing",
+      "data":{
+         "modhash":"",
+         "dist":1,
+         "children":[
+            {
+               "kind":"t3",
+               "data":{
+                  "approved_at_utc":null,
+                  "subreddit":"brasil",
+                  "selftext":"Reservado para *podcasts*. Quais podcasts você anda ouvindo? Compartilhe com a gente!",
+                  "user_reports":[
+
+                  ],
+                  "saved":false,
+                  "mod_reason_title":null,
+                  "gilded":0,
+                  "clicked":false,
+                  "title":"Que podcasts você está ouvindo? - 24.07.2020",
+                  "link_flair_richtext":[
+                     {
+                        "e":"text",
+                        "t":"Ei, Brasil"
+                     }
+                  ],
+                  "subreddit_name_prefixed":"r/brasil",
+                  "hidden":false,
+                  "pwls":6,
+                  "link_flair_css_class":"Eibrasil",
+                  "downs":0,
+                  "thumbnail_height":null,
+                  "top_awarded_type":null,
+                  "parent_whitelist_status":"all_ads",
+                  "hide_score":false,
+                  "name":"t3_hx2amb",
+                  "quarantine":false,
+                  "link_flair_text_color":"dark",
+                  "upvote_ratio":0.48,
+                  "author_flair_background_color":null,
+                  "subreddit_type":"public",
+                  "ups":0,
+                  "total_awards_received":0,
+                  "media_embed":{
+
+                  },
+                  "thumbnail_width":null,
+                  "author_flair_template_id":null,
+                  "is_original_content":false,
+                  "author_fullname":"t2_6l4z3",
+                  "secure_media":null,
+                  "is_reddit_media_domain":false,
+                  "is_meta":false,
+                  "category":null,
+                  "secure_media_embed":{
+
+                  },
+                  "link_flair_text":"Ei, Brasil",
+                  "can_mod_post":false,
+                  "score":0,
+                  "approved_by":null,
+                  "author_premium":true,
+                  "thumbnail":"self",
+                  "edited":false,
+                  "author_flair_css_class":null,
+                  "author_flair_richtext":[
+
+                  ],
+                  "gildings":{
+
+                  },
+                  "content_categories":null,
+                  "is_self":true,
+                  "mod_note":null,
+                  "created":1595628090.0,
+                  "link_flair_type":"richtext",
+                  "wls":6,
+                  "removed_by_category":null,
+                  "banned_by":null,
+                  "author_flair_type":"text",
+                  "domain":"self.brasil",
+                  "allow_live_comments":false,
+                  "selftext_html":"<!-- SC_OFF --><div class=\"md\"><p>Reservado para <em>podcasts</em>. Quais podcasts você anda ouvindo? Compartilhe com a gente!</p>\n</div><!-- SC_ON -->",
+                  "likes":null,
+                  "suggested_sort":null,
+                  "banned_at_utc":null,
+                  "view_count":null,
+                  "archived":false,
+                  "no_follow":true,
+                  "is_crosspostable":false,
+                  "pinned":false,
+                  "over_18":false,
+                  "all_awardings":[
+
+                  ],
+                  "awarders":[
+
+                  ],
+                  "media_only":false,
+                  "can_gild":false,
+                  "spoiler":false,
+                  "locked":false,
+                  "author_flair_text":null,
+                  "treatment_tags":[
+
+                  ],
+                  "visited":false,
+                  "removed_by":null,
+                  "num_reports":null,
+                  "distinguished":"moderator",
+                  "subreddit_id":"t5_2qh9i",
+                  "mod_reason_by":null,
+                  "removal_reason":null,
+                  "link_flair_background_color":"",
+                  "id":"hx2amb",
+                  "is_robot_indexable":true,
+                  "num_duplicates":0,
+                  "report_reasons":null,
+                  "author":"AutoModerator",
+                  "discussion_type":null,
+                  "num_comments":22,
+                  "send_replies":false,
+                  "media":null,
+                  "contest_mode":false,
+                  "author_patreon_flair":false,
+                  "author_flair_text_color":null,
+                  "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/",
+                  "whitelist_status":"all_ads",
+                  "stickied":true,
+                  "url":"https://www.reddit.com/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/",
+                  "subreddit_subscribers":404719,
+                  "created_utc":1595599290.0,
+                  "num_crossposts":0,
+                  "mod_reports":[
+
+                  ],
+                  "is_video":false
+               }
+            }
+         ],
+         "after":null,
+         "before":null
+      }
+   },
+   {
+      "kind":"Listing",
+      "data":{
+         "modhash":"",
+         "dist":null,
+         "children":[
+            {
+               "kind":"t1",
+               "data":{
+                  "total_awards_received":0,
+                  "approved_at_utc":null,
+                  "ups":11,
+                  "awarders":[
+
+                  ],
+                  "mod_reason_by":null,
+                  "banned_by":null,
+                  "author_flair_type":"text",
+                  "removal_reason":null,
+                  "link_id":"t3_hx2amb",
+                  "author_flair_template_id":null,
+                  "likes":null,
+                  "replies":"",
+                  "user_reports":[
+
+                  ],
+                  "saved":false,
+                  "id":"fz3m242",
+                  "banned_at_utc":null,
+                  "mod_reason_title":null,
+                  "gilded":0,
+                  "archived":false,
+                  "no_follow":true,
+                  "author":"AlgunNameDeUsuario",
+                  "can_mod_post":false,
+                  "send_replies":true,
+                  "parent_id":"t3_hx2amb",
+                  "score":11,
+                  "author_fullname":"t2_6kh9w91a",
+                  "report_reasons":null,
+                  "approved_by":null,
+                  "all_awardings":[
+
+                  ],
+                  "subreddit_id":"t5_2qh9i",
+                  "body":"Eu não sou brasileiro mas estou aprendendo português com os podcasts.\n\nEu ouço \"dorma com essa\" e eu gosto muito porque é muito corto e fácil de comprender.\n\nJá vou escutar o Podcast \"O assunto\" e vou lhes dizer como é, se é bom ou não.",
+                  "edited":false,
+                  "downs":0,
+                  "author_flair_css_class":null,
+                  "is_submitter":false,
+                  "collapsed":false,
+                  "author_flair_richtext":[
+
+                  ],
+                  "author_patreon_flair":false,
+                  "body_html":"<div class=\"md\"><p>Eu não sou brasileiro mas estou aprendendo português com os podcasts.</p>\n\n<p>Eu ouço &quot;dorma com essa&quot; e eu gosto muito porque é muito corto e fácil de comprender.</p>\n\n<p>Já vou escutar o Podcast &quot;O assunto&quot; e vou lhes dizer como é, se é bom ou não.</p>\n</div>",
+                  "gildings":{
+
+                  },
+                  "collapsed_reason":null,
+                  "associated_award":null,
+                  "stickied":false,
+                  "author_premium":false,
+                  "subreddit_type":"public",
+                  "can_gild":true,
+                  "top_awarded_type":null,
+                  "author_flair_text_color":null,
+                  "score_hidden":false,
+                  "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz3m242/",
+                  "num_reports":null,
+                  "locked":false,
+                  "name":"t1_fz3m242",
+                  "created":1595634054.0,
+                  "subreddit":"brasil",
+                  "author_flair_text":null,
+                  "treatment_tags":[
+
+                  ],
+                  "created_utc":1595605254.0,
+                  "subreddit_name_prefixed":"r/brasil",
+                  "controversiality":0,
+                  "depth":0,
+                  "author_flair_background_color":null,
+                  "collapsed_because_crowd_control":null,
+                  "mod_reports":[
+
+                  ],
+                  "mod_note":null,
+                  "distinguished":null
+               }
+            },
+            {
+               "kind":"t1",
+               "data":{
+                  "total_awards_received":0,
+                  "approved_at_utc":null,
+                  "ups":9,
+                  "awarders":[
+
+                  ],
+                  "mod_reason_by":null,
+                  "banned_by":null,
+                  "author_flair_type":"text",
+                  "removal_reason":null,
+                  "link_id":"t3_hx2amb",
+                  "author_flair_template_id":null,
+                  "likes":null,
+                  "replies":{
+                     "kind":"Listing",
+                     "data":{
+                        "modhash":"",
+                        "dist":null,
+                        "children":[
+                           {
+                              "kind":"t1",
+                              "data":{
+                                 "total_awards_received":0,
+                                 "approved_at_utc":null,
+                                 "ups":2,
+                                 "awarders":[
+
+                                 ],
+                                 "mod_reason_by":null,
+                                 "banned_by":null,
+                                 "author_flair_type":"text",
+                                 "removal_reason":null,
+                                 "link_id":"t3_hx2amb",
+                                 "author_flair_template_id":null,
+                                 "likes":null,
+                                 "replies":"",
+                                 "user_reports":[
+
+                                 ],
+                                 "saved":false,
+                                 "id":"fz72t5c",
+                                 "banned_at_utc":null,
+                                 "mod_reason_title":null,
+                                 "gilded":0,
+                                 "archived":false,
+                                 "no_follow":true,
+                                 "author":"torre_de_isaias",
+                                 "can_mod_post":false,
+                                 "send_replies":true,
+                                 "parent_id":"t1_fz42quh",
+                                 "score":2,
+                                 "author_fullname":"t2_4zpjts4f",
+                                 "report_reasons":null,
+                                 "approved_by":null,
+                                 "all_awardings":[
+
+                                 ],
+                                 "subreddit_id":"t5_2qh9i",
+                                 "collapsed":false,
+                                 "body":"Resumo obrigatório da semana na política brasileira, toda sexta ou sábado.",
+                                 "edited":false,
+                                 "author_flair_css_class":null,
+                                 "is_submitter":false,
+                                 "downs":0,
+                                 "author_flair_richtext":[
+
+                                 ],
+                                 "author_patreon_flair":false,
+                                 "body_html":"<div class=\"md\"><p>Resumo obrigatório da semana na política brasileira, toda sexta ou sábado.</p>\n</div>",
+                                 "gildings":{
+
+                                 },
+                                 "collapsed_reason":null,
+                                 "associated_award":null,
+                                 "stickied":false,
+                                 "author_premium":false,
+                                 "subreddit_type":"public",
+                                 "can_gild":true,
+                                 "top_awarded_type":null,
+                                 "author_flair_text_color":null,
+                                 "score_hidden":false,
+                                 "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz72t5c/",
+                                 "num_reports":null,
+                                 "locked":false,
+                                 "name":"t1_fz72t5c",
+                                 "created":1595714137.0,
+                                 "subreddit":"brasil",
+                                 "author_flair_text":null,
+                                 "treatment_tags":[
+
+                                 ],
+                                 "created_utc":1595685337.0,
+                                 "subreddit_name_prefixed":"r/brasil",
+                                 "controversiality":0,
+                                 "depth":1,
+                                 "author_flair_background_color":null,
+                                 "collapsed_because_crowd_control":null,
+                                 "mod_reports":[
+
+                                 ],
+                                 "mod_note":null,
+                                 "distinguished":null
+                              }
+                           },
+                           {
+                              "kind":"t1",
+                              "data":{
+                                 "total_awards_received":0,
+                                 "approved_at_utc":null,
+                                 "ups":1,
+                                 "awarders":[
+
+                                 ],
+                                 "mod_reason_by":null,
+                                 "banned_by":null,
+                                 "author_flair_type":"richtext",
+                                 "removal_reason":null,
+                                 "link_id":"t3_hx2amb",
+                                 "author_flair_template_id":null,
+                                 "likes":null,
+                                 "replies":"",
+                                 "user_reports":[
+
+                                 ],
+                                 "saved":false,
+                                 "id":"fz7n77j",
+                                 "banned_at_utc":null,
+                                 "mod_reason_title":null,
+                                 "gilded":0,
+                                 "archived":false,
+                                 "no_follow":true,
+                                 "author":"viniciusgusmao",
+                                 "can_mod_post":false,
+                                 "send_replies":true,
+                                 "parent_id":"t1_fz42quh",
+                                 "score":1,
+                                 "author_fullname":"t2_ymoh8",
+                                 "report_reasons":null,
+                                 "approved_by":null,
+                                 "all_awardings":[
+
+                                 ],
+                                 "subreddit_id":"t5_2qh9i",
+                                 "collapsed":false,
+                                 "body":"Se eu fosse outra pessoa, gostaria de ser o Fernando de Barros e Silva.",
+                                 "edited":false,
+                                 "author_flair_css_class":"SP",
+                                 "is_submitter":false,
+                                 "downs":0,
+                                 "author_flair_richtext":[
+                                    {
+                                       "e":"text",
+                                       "t":"São Paulo, SP"
+                                    }
+                                 ],
+                                 "author_patreon_flair":false,
+                                 "body_html":"<div class=\"md\"><p>Se eu fosse outra pessoa, gostaria de ser o Fernando de Barros e Silva.</p>\n</div>",
+                                 "gildings":{
+
+                                 },
+                                 "collapsed_reason":null,
+                                 "associated_award":null,
+                                 "stickied":false,
+                                 "author_premium":false,
+                                 "subreddit_type":"public",
+                                 "can_gild":true,
+                                 "top_awarded_type":null,
+                                 "author_flair_text_color":"dark",
+                                 "score_hidden":true,
+                                 "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz7n77j/",
+                                 "num_reports":null,
+                                 "locked":false,
+                                 "name":"t1_fz7n77j",
+                                 "created":1595725979.0,
+                                 "subreddit":"brasil",
+                                 "author_flair_text":"São Paulo, SP",
+                                 "treatment_tags":[
+
+                                 ],
+                                 "created_utc":1595697179.0,
+                                 "subreddit_name_prefixed":"r/brasil",
+                                 "controversiality":0,
+                                 "depth":1,
+                                 "author_flair_background_color":"",
+                                 "collapsed_because_crowd_control":null,
+                                 "mod_reports":[
+
+                                 ],
+                                 "mod_note":null,
+                                 "distinguished":null
+                              }
+                           }
+                        ],
+                        "after":null,
+                        "before":null
+                     }
+                  },
+                  "user_reports":[
+
+                  ],
+                  "saved":false,
+                  "id":"fz42quh",
+                  "banned_at_utc":null,
+                  "mod_reason_title":null,
+                  "gilded":0,
+                  "archived":false,
+                  "no_follow":true,
+                  "author":"Henrymlsan",
+                  "can_mod_post":false,
+                  "send_replies":true,
+                  "parent_id":"t3_hx2amb",
+                  "score":9,
+                  "author_fullname":"t2_4s6jqkzv",
+                  "report_reasons":null,
+                  "approved_by":null,
+                  "all_awardings":[
+
+                  ],
+                  "subreddit_id":"t5_2qh9i",
+                  "body":"Eu ouço Foro de Teresina, é muito bom com alguns jornalistas da revista Piauí. É um podcast sobre política brasileira e algumas atualidades. Recomendo muito!",
+                  "edited":false,
+                  "downs":0,
+                  "author_flair_css_class":null,
+                  "is_submitter":false,
+                  "collapsed":false,
+                  "author_flair_richtext":[
+
+                  ],
+                  "author_patreon_flair":false,
+                  "body_html":"<div class=\"md\"><p>Eu ouço Foro de Teresina, é muito bom com alguns jornalistas da revista Piauí. É um podcast sobre política brasileira e algumas atualidades. Recomendo muito!</p>\n</div>",
+                  "gildings":{
+
+                  },
+                  "collapsed_reason":null,
+                  "associated_award":null,
+                  "stickied":false,
+                  "author_premium":false,
+                  "subreddit_type":"public",
+                  "can_gild":true,
+                  "top_awarded_type":null,
+                  "author_flair_text_color":null,
+                  "score_hidden":false,
+                  "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz42quh/",
+                  "num_reports":null,
+                  "locked":false,
+                  "name":"t1_fz42quh",
+                  "created":1595641893.0,
+                  "subreddit":"brasil",
+                  "author_flair_text":null,
+                  "treatment_tags":[
+
+                  ],
+                  "created_utc":1595613093.0,
+                  "subreddit_name_prefixed":"r/brasil",
+                  "controversiality":0,
+                  "depth":0,
+                  "author_flair_background_color":null,
+                  "collapsed_because_crowd_control":null,
+                  "mod_reports":[
+
+                  ],
+                  "mod_note":null,
+                  "distinguished":null
+               }
+            },
+            {
+               "kind":"t1",
+               "data":{
+                  "total_awards_received":0,
+                  "approved_at_utc":null,
+                  "ups":5,
+                  "awarders":[
+
+                  ],
+                  "mod_reason_by":null,
+                  "banned_by":null,
+                  "author_flair_type":"text",
+                  "removal_reason":null,
+                  "link_id":"t3_hx2amb",
+                  "author_flair_template_id":null,
+                  "likes":null,
+                  "replies":{
+                     "kind":"Listing",
+                     "data":{
+                        "modhash":"",
+                        "dist":null,
+                        "children":[
+                           {
+                              "kind":"t1",
+                              "data":{
+                                 "total_awards_received":0,
+                                 "approved_at_utc":null,
+                                 "ups":4,
+                                 "awarders":[
+
+                                 ],
+                                 "mod_reason_by":null,
+                                 "banned_by":null,
+                                 "author_flair_type":"text",
+                                 "removal_reason":null,
+                                 "link_id":"t3_hx2amb",
+                                 "author_flair_template_id":null,
+                                 "likes":null,
+                                 "replies":{
+                                    "kind":"Listing",
+                                    "data":{
+                                       "modhash":"",
+                                       "dist":null,
+                                       "children":[
+                                          {
+                                             "kind":"t1",
+                                             "data":{
+                                                "total_awards_received":0,
+                                                "approved_at_utc":null,
+                                                "ups":3,
+                                                "awarders":[
+
+                                                ],
+                                                "mod_reason_by":null,
+                                                "banned_by":null,
+                                                "author_flair_type":"text",
+                                                "removal_reason":null,
+                                                "link_id":"t3_hx2amb",
+                                                "author_flair_template_id":null,
+                                                "likes":null,
+                                                "replies":"",
+                                                "user_reports":[
+
+                                                ],
+                                                "saved":false,
+                                                "id":"fz435fq",
+                                                "banned_at_utc":null,
+                                                "mod_reason_title":null,
+                                                "gilded":0,
+                                                "archived":false,
+                                                "no_follow":true,
+                                                "author":"Dr_Ousiris",
+                                                "can_mod_post":false,
+                                                "created_utc":1595613280.0,
+                                                "send_replies":true,
+                                                "parent_id":"t1_fz40ekz",
+                                                "score":3,
+                                                "author_fullname":"t2_1iw7b3g5",
+                                                "report_reasons":null,
+                                                "approved_by":null,
+                                                "all_awardings":[
+
+                                                ],
+                                                "subreddit_id":"t5_2qh9i",
+                                                "body":"Vale a pena!",
+                                                "edited":false,
+                                                "author_flair_css_class":null,
+                                                "is_submitter":false,
+                                                "downs":0,
+                                                "author_flair_richtext":[
+
+                                                ],
+                                                "author_patreon_flair":false,
+                                                "body_html":"<div class=\"md\"><p>Vale a pena!</p>\n</div>",
+                                                "gildings":{
+
+                                                },
+                                                "collapsed_reason":null,
+                                                "associated_award":null,
+                                                "stickied":false,
+                                                "author_premium":false,
+                                                "subreddit_type":"public",
+                                                "can_gild":true,
+                                                "top_awarded_type":null,
+                                                "author_flair_text_color":null,
+                                                "score_hidden":false,
+                                                "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz435fq/",
+                                                "num_reports":null,
+                                                "locked":false,
+                                                "name":"t1_fz435fq",
+                                                "created":1595642080.0,
+                                                "subreddit":"brasil",
+                                                "author_flair_text":null,
+                                                "treatment_tags":[
+
+                                                ],
+                                                "collapsed":false,
+                                                "subreddit_name_prefixed":"r/brasil",
+                                                "controversiality":0,
+                                                "depth":2,
+                                                "author_flair_background_color":null,
+                                                "collapsed_because_crowd_control":null,
+                                                "mod_reports":[
+
+                                                ],
+                                                "mod_note":null,
+                                                "distinguished":null
+                                             }
+                                          },
+                                          {
+                                             "kind":"t1",
+                                             "data":{
+                                                "total_awards_received":0,
+                                                "approved_at_utc":null,
+                                                "ups":3,
+                                                "awarders":[
+
+                                                ],
+                                                "mod_reason_by":null,
+                                                "banned_by":null,
+                                                "author_flair_type":"text",
+                                                "removal_reason":null,
+                                                "link_id":"t3_hx2amb",
+                                                "author_flair_template_id":null,
+                                                "likes":null,
+                                                "replies":"",
+                                                "user_reports":[
+
+                                                ],
+                                                "saved":false,
+                                                "id":"fz734xq",
+                                                "banned_at_utc":null,
+                                                "mod_reason_title":null,
+                                                "gilded":0,
+                                                "archived":false,
+                                                "no_follow":true,
+                                                "author":"torre_de_isaias",
+                                                "can_mod_post":false,
+                                                "created_utc":1595685554.0,
+                                                "send_replies":true,
+                                                "parent_id":"t1_fz40ekz",
+                                                "score":3,
+                                                "author_fullname":"t2_4zpjts4f",
+                                                "report_reasons":null,
+                                                "approved_by":null,
+                                                "all_awardings":[
+
+                                                ],
+                                                "subreddit_id":"t5_2qh9i",
+                                                "body":"Não tem jeito mais legal de aprender a água bate na bunda e tu se vê obrigado a nadar. A primeira vez que eu percebi que estava ouvindo e entendendo (70 por cento de compreensão, vá lá) eu fiquei muito orgulhoso de mim mesmo.   \nTenta começar ouvindo os menos coloquiais, tipo do Vox, que além de usar um inglês mais direto e sem gírias, eles oferecem transcrição para download, o que pode te ajudar mais ainda.",
+                                                "edited":false,
+                                                "author_flair_css_class":null,
+                                                "is_submitter":false,
+                                                "downs":0,
+                                                "author_flair_richtext":[
+
+                                                ],
+                                                "author_patreon_flair":false,
+                                                "body_html":"<div class=\"md\"><p>Não tem jeito mais legal de aprender a água bate na bunda e tu se vê obrigado a nadar. A primeira vez que eu percebi que estava ouvindo e entendendo (70 por cento de compreensão, vá lá) eu fiquei muito orgulhoso de mim mesmo.<br/>\nTenta começar ouvindo os menos coloquiais, tipo do Vox, que além de usar um inglês mais direto e sem gírias, eles oferecem transcrição para download, o que pode te ajudar mais ainda.</p>\n</div>",
+                                                "gildings":{
+
+                                                },
+                                                "collapsed_reason":null,
+                                                "associated_award":null,
+                                                "stickied":false,
+                                                "author_premium":false,
+                                                "subreddit_type":"public",
+                                                "can_gild":true,
+                                                "top_awarded_type":null,
+                                                "author_flair_text_color":null,
+                                                "score_hidden":false,
+                                                "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz734xq/",
+                                                "num_reports":null,
+                                                "locked":false,
+                                                "name":"t1_fz734xq",
+                                                "created":1595714354.0,
+                                                "subreddit":"brasil",
+                                                "author_flair_text":null,
+                                                "treatment_tags":[
+
+                                                ],
+                                                "collapsed":false,
+                                                "subreddit_name_prefixed":"r/brasil",
+                                                "controversiality":0,
+                                                "depth":2,
+                                                "author_flair_background_color":null,
+                                                "collapsed_because_crowd_control":null,
+                                                "mod_reports":[
+
+                                                ],
+                                                "mod_note":null,
+                                                "distinguished":null
+                                             }
+                                          }
+                                       ],
+                                       "after":null,
+                                       "before":null
+                                    }
+                                 },
+                                 "user_reports":[
+
+                                 ],
+                                 "saved":false,
+                                 "id":"fz40ekz",
+                                 "banned_at_utc":null,
+                                 "mod_reason_title":null,
+                                 "gilded":0,
+                                 "archived":false,
+                                 "no_follow":true,
+                                 "author":"LittleBellsprout",
+                                 "can_mod_post":false,
+                                 "send_replies":true,
+                                 "parent_id":"t1_fz3wlu7",
+                                 "score":4,
+                                 "author_fullname":"t2_36aqtl8e",
+                                 "report_reasons":null,
+                                 "approved_by":null,
+                                 "all_awardings":[
+
+                                 ],
+                                 "subreddit_id":"t5_2qh9i",
+                                 "collapsed":false,
+                                 "body":"Queria ser mais avançado no inglês pra poder acompanhar",
+                                 "edited":false,
+                                 "author_flair_css_class":null,
+                                 "is_submitter":false,
+                                 "downs":0,
+                                 "author_flair_richtext":[
+
+                                 ],
+                                 "author_patreon_flair":false,
+                                 "body_html":"<div class=\"md\"><p>Queria ser mais avançado no inglês pra poder acompanhar</p>\n</div>",
+                                 "gildings":{
+
+                                 },
+                                 "collapsed_reason":null,
+                                 "associated_award":null,
+                                 "stickied":false,
+                                 "author_premium":false,
+                                 "subreddit_type":"public",
+                                 "can_gild":true,
+                                 "top_awarded_type":null,
+                                 "author_flair_text_color":null,
+                                 "score_hidden":false,
+                                 "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz40ekz/",
+                                 "num_reports":null,
+                                 "locked":false,
+                                 "name":"t1_fz40ekz",
+                                 "created":1595640806.0,
+                                 "subreddit":"brasil",
+                                 "author_flair_text":null,
+                                 "treatment_tags":[
+
+                                 ],
+                                 "created_utc":1595612006.0,
+                                 "subreddit_name_prefixed":"r/brasil",
+                                 "controversiality":0,
+                                 "depth":1,
+                                 "author_flair_background_color":null,
+                                 "collapsed_because_crowd_control":null,
+                                 "mod_reports":[
+
+                                 ],
+                                 "mod_note":null,
+                                 "distinguished":null
+                              }
+                           }
+                        ],
+                        "after":null,
+                        "before":null
+                     }
+                  },
+                  "user_reports":[
+
+                  ],
+                  "saved":false,
+                  "id":"fz3wlu7",
+                  "banned_at_utc":null,
+                  "mod_reason_title":null,
+                  "gilded":0,
+                  "archived":false,
+                  "no_follow":true,
+                  "author":"Dr_Ousiris",
+                  "can_mod_post":false,
+                  "send_replies":true,
+                  "parent_id":"t3_hx2amb",
+                  "score":5,
+                  "author_fullname":"t2_1iw7b3g5",
+                  "report_reasons":null,
+                  "approved_by":null,
+                  "all_awardings":[
+
+                  ],
+                  "subreddit_id":"t5_2qh9i",
+                  "body":"Comecei a ouvir DUNCAN TRUSSEL FAMILY HOUR, do criador de midnight gospel.\n\nAlguns episódios tão profundos quanto a série, alguns com piadas bobas, mas todos valem a pena.\n\nGosto mto como ele fala abertamente sobre depressão e crises de ansiedade e como lidar com elas",
+                  "edited":false,
+                  "downs":0,
+                  "author_flair_css_class":null,
+                  "is_submitter":false,
+                  "collapsed":false,
+                  "author_flair_richtext":[
+
+                  ],
+                  "author_patreon_flair":false,
+                  "body_html":"<div class=\"md\"><p>Comecei a ouvir DUNCAN TRUSSEL FAMILY HOUR, do criador de midnight gospel.</p>\n\n<p>Alguns episódios tão profundos quanto a série, alguns com piadas bobas, mas todos valem a pena.</p>\n\n<p>Gosto mto como ele fala abertamente sobre depressão e crises de ansiedade e como lidar com elas</p>\n</div>",
+                  "gildings":{
+
+                  },
+                  "collapsed_reason":null,
+                  "associated_award":null,
+                  "stickied":false,
+                  "author_premium":false,
+                  "subreddit_type":"public",
+                  "can_gild":true,
+                  "top_awarded_type":null,
+                  "author_flair_text_color":null,
+                  "score_hidden":false,
+                  "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz3wlu7/",
+                  "num_reports":null,
+                  "locked":false,
+                  "name":"t1_fz3wlu7",
+                  "created":1595639035.0,
+                  "subreddit":"brasil",
+                  "author_flair_text":null,
+                  "treatment_tags":[
+
+                  ],
+                  "created_utc":1595610235.0,
+                  "subreddit_name_prefixed":"r/brasil",
+                  "controversiality":0,
+                  "depth":0,
+                  "author_flair_background_color":null,
+                  "collapsed_because_crowd_control":null,
+                  "mod_reports":[
+
+                  ],
+                  "mod_note":null,
+                  "distinguished":null
+               }
+            },
+            {
+               "kind":"t1",
+               "data":{
+                  "total_awards_received":0,
+                  "approved_at_utc":null,
+                  "ups":5,
+                  "awarders":[
+
+                  ],
+                  "mod_reason_by":null,
+                  "banned_by":null,
+                  "author_flair_type":"text",
+                  "removal_reason":null,
+                  "link_id":"t3_hx2amb",
+                  "author_flair_template_id":null,
+                  "likes":null,
+                  "replies":"",
+                  "user_reports":[
+
+                  ],
+                  "saved":false,
+                  "id":"fz40bos",
+                  "banned_at_utc":null,
+                  "mod_reason_title":null,
+                  "gilded":0,
+                  "archived":false,
+                  "no_follow":true,
+                  "author":"LittleBellsprout",
+                  "can_mod_post":false,
+                  "send_replies":true,
+                  "parent_id":"t3_hx2amb",
+                  "score":5,
+                  "author_fullname":"t2_36aqtl8e",
+                  "report_reasons":null,
+                  "approved_by":null,
+                  "all_awardings":[
+
+                  ],
+                  "subreddit_id":"t5_2qh9i",
+                  "body":"Ouço quase sempre alguns sobre ciências Biológicas como SciCast, Rock com Ciência, Dragões de garagem e 37graus.\nGosto também do Mitografias, Loop matinal, Inglês todo dia(tô tentando melhorar meu vocabulário) e O Assunto.",
+                  "edited":false,
+                  "downs":0,
+                  "author_flair_css_class":null,
+                  "is_submitter":false,
+                  "collapsed":false,
+                  "author_flair_richtext":[
+
+                  ],
+                  "author_patreon_flair":false,
+                  "body_html":"<div class=\"md\"><p>Ouço quase sempre alguns sobre ciências Biológicas como SciCast, Rock com Ciência, Dragões de garagem e 37graus.\nGosto também do Mitografias, Loop matinal, Inglês todo dia(tô tentando melhorar meu vocabulário) e O Assunto.</p>\n</div>",
+                  "gildings":{
+
+                  },
+                  "collapsed_reason":null,
+                  "associated_award":null,
+                  "stickied":false,
+                  "author_premium":false,
+                  "subreddit_type":"public",
+                  "can_gild":true,
+                  "top_awarded_type":null,
+                  "author_flair_text_color":null,
+                  "score_hidden":false,
+                  "permalink":"/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/fz40bos/",
+                  "num_reports":null,
+                  "locked":false,
+                  "name":"t1_fz40bos",
+                  "created":1595640770.0,
+                  "subreddit":"brasil",
+                  "author_flair_text":null,
+                  "treatment_tags":[
+
+                  ],
+                  "created_utc":1595611970.0,
+                  "subreddit_name_prefixed":"r/brasil",
+                  "controversiality":0,
+                  "depth":0,
+                  "author_flair_background_color":null,
+                  "collapsed_because_crowd_control":null,
+                  "mod_reports":[
+
+                  ],
+                  "mod_note":null,
+                  "distinguished":null
+               }
+            }
+         ],
+         "after":null,
+         "before":null
+      }
+   }
+]

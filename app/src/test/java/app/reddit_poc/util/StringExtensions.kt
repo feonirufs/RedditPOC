@@ -1,5 +1,6 @@
 package app.reddit_poc.util
 
-fun String.asJson(): String = javaClass.getResource(this)?.readBytes()?.let {
-    String(it)
-}.toString()
+fun String.toJson(): String =
+    javaClass.getResource(this)?.readBytes()?.let {
+        String(it)
+    }.toString()

@@ -3,7 +3,7 @@ package app.reddit_poc.api.service
 import app.reddit_poc.api.response.post.CommentResponse
 import app.reddit_poc.api.response.topic.TopicResponse
 import app.reddit_poc.util.FakeWebServiceFactory
-import app.reddit_poc.util.asJson
+import app.reddit_poc.util.toJson
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isNull
@@ -27,7 +27,7 @@ class RedditServiceTest {
     @Test
     fun `should return null when api returns nothing`() {
         runBlocking {
-            val responseData = "/fake-response/post-empty-list.json".asJson()
+            val responseData = "/fake-response/post-empty-list.json".toJson()
 
             val response = MockResponse()
                 .setResponseCode(HttpURLConnection.HTTP_OK)
@@ -43,7 +43,7 @@ class RedditServiceTest {
     @Test
     fun `should return TopicResponse when api returns data`() {
         runBlocking {
-            val responseData = "/fake-response/post-list.json".asJson()
+            val responseData = "/fake-response/post-list.json".toJson()
 
             val response = MockResponse()
                 .setResponseCode(HttpURLConnection.HTTP_OK)
@@ -62,7 +62,7 @@ class RedditServiceTest {
     @Test
     fun `should return empty list of comments when post has no comments`() {
         runBlocking {
-            val responseData = "/fake-response/post-with-no-comments.json".asJson()
+            val responseData = "/fake-response/post-with-no-comments.json".toJson()
 
             val response = MockResponse()
                 .setResponseCode(HttpURLConnection.HTTP_OK)
@@ -78,7 +78,7 @@ class RedditServiceTest {
     @Test
     fun `should return post with comments when post has comments`() {
         runBlocking {
-            val responseData = "/fake-response/post-with-comments.json".asJson()
+            val responseData = "/fake-response/post-with-comments.json".toJson()
 
             val response = MockResponse()
                 .setResponseCode(HttpURLConnection.HTTP_OK)

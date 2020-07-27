@@ -17,7 +17,7 @@ class TopicViewModelTest {
     @get:Rule val instantTaskExecutorRule = InstantTaskExecutorRule()
     @get:Rule val coroutinesTestRule = MainCoroutineRule()
 
-    private val interactor = mockk<TopicRepository>(relaxed = true)
+    private val interactor = mockk<TopicRepository>()
     private val viewModel = TopicViewModel(interactor)
 
     private val topicUiState = mockk<Observer<UiState>>()
@@ -50,7 +50,7 @@ class TopicViewModelTest {
 
         viewModel.getPostsFromTopic()
 
-        val state = UiState.Error("Nao foi possível carregar os posts!")
+        val state = UiState.Error("Não consegui carregar nenhum post :(")
 
         coVerify { interactor.getAllPostsInTopic(limit = 10, after = any()) }
 
@@ -59,6 +59,8 @@ class TopicViewModelTest {
 
     @Test
     fun `should set loading state while fetching list of post`() = coroutinesTestRule.runBlockingTest {
+        coEvery { interactor.getAllPostsInTopic(any(), any()) } returns flowOf(threePosts)
+
         viewModel.topicUiState.observeForever(topicUiState)
 
         viewModel.getPostsFromTopic()
@@ -97,7 +99,7 @@ class TopicViewModelTest {
 
         viewModel.getFullPost(POST_WITH_COMMENT_URL)
 
-        val state = UiState.Error("Nao foi possível carregar os posts!")
+        val state = UiState.Error("Não consegui carregar nenhum post :(")
 
         coVerify { interactor.getFullPostData(any()) }
 
@@ -106,6 +108,8 @@ class TopicViewModelTest {
 
     @Test
     fun `should set loading state while fetching full post`() = coroutinesTestRule.runBlockingTest {
+        coEvery { interactor.getFullPostData(any()) } returns flowOf(fullPostWithComments)
+
         viewModel.postUiState.observeForever(postUiState)
 
         viewModel.getFullPost(POST_WITH_NO_COMMENT_URL)

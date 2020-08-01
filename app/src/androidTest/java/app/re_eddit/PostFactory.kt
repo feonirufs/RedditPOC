@@ -1,8 +1,8 @@
-package app.reddit_poc
+package app.re_eddit
 
-import app.reddit_poc.domain.entity.Comment
-import app.reddit_poc.domain.entity.Post
-import app.reddit_poc.domain.entity.PostFullPage
+import app.re_eddit.domain.entity.Comment
+import app.re_eddit.domain.entity.Post
+import app.re_eddit.domain.entity.PostFullPage
 
 object PostFactory {
     val onePost: List<Post>

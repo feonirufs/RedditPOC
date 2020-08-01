@@ -1,4 +1,4 @@
-package app.reddit_poc.util
+package app.re_eddit.util
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView

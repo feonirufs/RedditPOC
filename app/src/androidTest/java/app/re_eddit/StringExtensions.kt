@@ -1,4 +1,4 @@
-package app.reddit_poc
+package app.re_eddit
 
 import androidx.test.platform.app.InstrumentationRegistry
 

@@ -1,21 +1,18 @@
-package app.reddit_poc
+package app.re_eddit
 
-import app.reddit_poc.api.service.RedditService
+import app.re_eddit.api.service.RedditService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import okhttp3.mockwebserver.MockWebServer
-import okhttp3.tls.HandshakeCertificates
-import okhttp3.tls.HeldCertificate
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
-import java.net.InetAddress
 
 object FakeWebServiceFactory {
     val webService by lazy { createRedditWebService() }
-    val mockWebServer = MockWebServer()
+    val mockWebServer: MockWebServer by lazy { MockWebServer() }
 
     private fun createRedditWebService(): RedditService {
         val debuggable = BuildConfig.DEBUG
@@ -26,8 +23,6 @@ object FakeWebServiceFactory {
                 )
             )
 
-        val certificate = createCertificate(InetAddress.getByName("localhost").canonicalHostName)
-        mockWebServer.useHttps(createServerCertificate(certificate).sslSocketFactory(), false)
         mockWebServer.start()
         val retrofit = Retrofit.Builder()
             .baseUrl(mockWebServer.url("/"))
@@ -65,14 +60,4 @@ object FakeWebServiceFactory {
             }
             .build()
     }
-
-    private fun createCertificate(host: String) =
-        HeldCertificate.Builder()
-            .addSubjectAlternativeName(host)
-            .build()
-
-    private fun createServerCertificate(hostCertificate: HeldCertificate) =
-        HandshakeCertificates.Builder()
-            .heldCertificate(hostCertificate)
-            .build()
 }

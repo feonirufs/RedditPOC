@@ -2,10 +2,10 @@
 
 Redeployment of Reddit's Android app.
 
-This project uses the following technologies:
+## Technologies
 
-- Android Architecture Components - Live Data, View Model
-- Retrofit
+- AndroidX/Jetpack
+- Standard Square buffet of OkHttp 3/Retrofit 2/Moshi
 - Google Material Design for Android
 - Kotlin Programming Language
 - Kotlin Coroutines
@@ -15,7 +15,7 @@ This project uses the following technologies:
 
 ## Development
 
-If you'd like to build Re-eddit locally, you _should_ be able to just clone and build with Android Studio with no issues.
+If you'd like to build Re-eddit locally, you _should_ be able to just clone, build and run with Android Studio with no issues.
 
 ### License
 

@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "RedditPOC"
+rootProject.name = "Re-eddit"

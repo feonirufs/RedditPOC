@@ -18,7 +18,7 @@ Redeployment of Reddit's Android app.
 - Kotin Serialization
 - JUnit and Espresso for tests
 
-## Development
+## Installation
 
 If you'd like to build Re-eddit locally, you _should_ be able to just clone, build and run with Android Studio with no issues.
 

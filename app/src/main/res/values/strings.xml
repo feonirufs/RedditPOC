@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">RedditPOC</string>
+    <string name="app_name">Re-eddit</string>
+    <string name="empty_list_error">Não temos nenhum post para você :(</string>
+    <string name="load_post_error">Não conseguimos carregar o post para você :(</string>
 </resources>

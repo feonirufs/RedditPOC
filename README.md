@@ -2,6 +2,11 @@
 
 Redeployment of Reddit's Android app.
 
+## Features
+
+- List of Posts
+- Detail of a Post
+
 ## Technologies
 
 - AndroidX/Jetpack

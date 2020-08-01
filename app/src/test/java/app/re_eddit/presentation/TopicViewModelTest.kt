@@ -1,12 +1,12 @@
-package app.reddit_poc.presentation
+package app.re_eddit.presentation
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import app.reddit_poc.domain.topic.TopicRepository
-import app.reddit_poc.ui.state.UiState
-import app.reddit_poc.util.MainCoroutineRule
-import app.reddit_poc.util.PostFactory.fullPostWithComments
-import app.reddit_poc.util.PostFactory.threePosts
+import app.re_eddit.domain.topic.TopicRepository
+import app.re_eddit.ui.state.UiState
+import app.re_eddit.util.MainCoroutineRule
+import app.re_eddit.util.PostFactory.fullPostWithComments
+import app.re_eddit.util.PostFactory.threePosts
 import io.mockk.*
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOf
@@ -99,7 +99,7 @@ class TopicViewModelTest {
 
         viewModel.getFullPost(POST_WITH_COMMENT_URL)
 
-        val state = UiState.Error("Não consegui carregar nenhum post :(")
+        val state = UiState.Error("Não consegui carregar o post :(")
 
         coVerify { interactor.getFullPostData(any()) }
 

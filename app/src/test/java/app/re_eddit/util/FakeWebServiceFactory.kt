@@ -1,7 +1,7 @@
-package app.reddit_poc.util
+package app.re_eddit.util
 
-import app.reddit_poc.BuildConfig
-import app.reddit_poc.api.service.RedditService
+import app.re_eddit.BuildConfig
+import app.re_eddit.api.service.RedditService
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import okhttp3.Interceptor

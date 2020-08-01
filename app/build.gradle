@@ -9,13 +9,13 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "app.reddit_poc"
+        applicationId "app.re_eddit"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "app.re_eddit.runner.TestRunner"
 
         kotlinOptions {
             jvmTarget = "1.8"
@@ -98,6 +98,8 @@ dependencies {
     androidTestImplementation "androidx.test:rules:1.2.0"
     androidTestImplementation "androidx.test:runner:1.2.0"
     androidTestImplementation "com.squareup.okhttp3:mockwebserver:4.8.0"
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.1'
+    androidTestImplementation "io.mockk:mockk-android:1.10.0"
     implementation 'androidx.test.espresso:espresso-core:3.2.0'
     kaptTest'com.squareup.moshi:moshi-kotlin-codegen:1.6.0'
 

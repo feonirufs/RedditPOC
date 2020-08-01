@@ -1,4 +1,4 @@
-package app.reddit_poc.util
+package app.re_eddit.util
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.test.TestCoroutineDispatcher

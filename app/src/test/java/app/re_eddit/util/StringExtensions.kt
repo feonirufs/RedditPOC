@@ -1,4 +1,4 @@
-package app.reddit_poc.util
+package app.re_eddit.util
 
 fun String.toJson(): String =
     javaClass.getResource(this)?.readBytes()?.let {

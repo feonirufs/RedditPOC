@@ -1,9 +1,9 @@
-package app.reddit_poc.api.service
+package app.re_eddit.api.service
 
-import app.reddit_poc.api.response.post.CommentResponse
-import app.reddit_poc.api.response.topic.TopicResponse
-import app.reddit_poc.util.FakeWebServiceFactory
-import app.reddit_poc.util.toJson
+import app.re_eddit.api.response.post.CommentResponse
+import app.re_eddit.api.response.topic.TopicResponse
+import app.re_eddit.util.FakeWebServiceFactory
+import app.re_eddit.util.toJson
 import assertk.assertThat
 import assertk.assertions.isEqualTo
 import assertk.assertions.isNull

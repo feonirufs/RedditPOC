@@ -1,18 +1,19 @@
-package app.reddit_poc.api.repository
+package app.re_eddit.api.repository
 
-import app.reddit_poc.api.response.post.CommentResponse
-import app.reddit_poc.api.response.topic.TopicResponse
-import app.reddit_poc.api.service.RedditService
-import app.reddit_poc.domain.entity.Post
-import app.reddit_poc.domain.entity.PostFullPage
-import app.reddit_poc.domain.mapper.toDomain
-import app.reddit_poc.domain.topic.TopicRepository
-import app.reddit_poc.util.MainCoroutineRule
-import app.reddit_poc.util.PostFactory.onePost
-import app.reddit_poc.util.PostFactory.threePosts
-import app.reddit_poc.util.toJson
+import app.re_eddit.api.response.post.CommentResponse
+import app.re_eddit.api.response.topic.TopicResponse
+import app.re_eddit.api.service.RedditService
+import app.re_eddit.domain.entity.Post
+import app.re_eddit.domain.entity.PostFullPage
+import app.re_eddit.domain.mapper.toDomain
+import app.re_eddit.domain.topic.TopicRepository
+import app.re_eddit.util.MainCoroutineRule
+import app.re_eddit.util.PostFactory.onePost
+import app.re_eddit.util.PostFactory.threePosts
+import app.re_eddit.util.toJson
 import assertk.assertThat
 import assertk.assertions.isEqualTo
+import assertk.assertions.isTrue
 import com.squareup.moshi.JsonAdapter
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
@@ -20,6 +21,7 @@ import io.mockk.coEvery
 import io.mockk.coVerify
 import io.mockk.mockk
 import kotlinx.coroutines.flow.collect
+import kotlinx.coroutines.flow.onEmpty
 import kotlinx.coroutines.runBlocking
 import org.junit.Rule
 import org.junit.Test
@@ -40,20 +42,20 @@ class TopicRepositoryTest {
             null
         )
 
-        coEvery { redditApi.getTopicData(limit = any(), after = null) } returns emptyTopicResponse
+        coEvery { redditApi.getTopicData(limit = any(), after = any()) } returns emptyTopicResponse
 
-        lateinit var result: List<Post>
+        var result = false
 
         repository.getAllPostsInTopic(after = "")
-            .collect {
-                result = it
-            }
+            .onEmpty {
+                result = true
+            }.collect {}
 
         coVerify {
             redditApi.getTopicData(limit = any(), after = any())
         }
 
-        assertThat(result).isEqualTo(emptyList())
+        assertThat(result).isTrue()
     }
 
     @Test

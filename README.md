@@ -15,7 +15,7 @@ Redeployment of Reddit's Android app.
 - Kotlin Programming Language
 - Kotlin Coroutines
 - Kotlin Flow
-- Kotin Serialization
+- Kotlin Serialization
 - JUnit and Espresso for tests
 
 ## Installation

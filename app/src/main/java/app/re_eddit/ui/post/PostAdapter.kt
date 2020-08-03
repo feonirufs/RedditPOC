@@ -31,10 +31,10 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.ViewHolder>() {
 
     inner class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         fun bind(comment: Comment) {
-            itemView.user_date.text = "u/" + comment.author + " . 4mo" //TODO SETUP DATE RIGHT
+            itemView.user_date.text = comment.commentInfo
             itemView.comment_body.text = comment.body
-            itemView.up_count.text = comment.ups.toString()
-            itemView.down_count.text = comment.downs.toString()
+            itemView.up_count.text = comment.ups
+            itemView.down_count.text = comment.downs
             if (comment.type != 1) {
                 itemView.divider.visibility = View.VISIBLE
                 ConstraintSet().apply {

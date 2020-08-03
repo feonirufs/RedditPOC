@@ -60,13 +60,24 @@ class PostActivity : AppCompatActivity() {
         })
     }
 
+    private fun onNewData(postFullPage: PostFullPage) {
+        initUi(post = postFullPage.post)
+        if (postFullPage.comments.isNotEmpty()) {
+            postAdapter.list = postFullPage.comments
+            comments_recycler.visibility = View.VISIBLE
+            error_text.visibility = View.GONE
+        } else {
+            comments_recycler.visibility = View.GONE
+        }
+    }
+
     private fun initUi(post: Post) {
         label_sub_reddit.text = post.subredditNamePrefixed
-        user_date.text = "Posted by u/" + post.author + " . 4mo" //TODO SETUP DATE RIGHT
+        user_date.text = post.postInfo
         post_title.text = post.title
-        up_count.text = post.ups.toString()
-        down_count.text = post.downs.toString()
-        comments_count.text = post.commentsCount.toString()
+        up_count.text = post.ups
+        down_count.text = post.downs
+        comments_count.text = post.commentsCount
         if (!post.thumbnail.isNullOrEmpty()) {
             post_thumbnail.visibility = View.VISIBLE
             post_body.visibility = View.GONE
@@ -79,17 +90,6 @@ class PostActivity : AppCompatActivity() {
             post_thumbnail.visibility = View.GONE
             post_body.visibility = View.VISIBLE
             post_body.text = post.body
-        }
-    }
-
-    private fun onNewData(postFullPage: PostFullPage) {
-        initUi(post = postFullPage.post)
-        if (postFullPage.comments.isNotEmpty()) {
-            postAdapter.list = postFullPage.comments
-            comments_recycler.visibility = View.VISIBLE
-            error_text.visibility = View.GONE
-        } else {
-            comments_recycler.visibility = View.GONE
         }
     }
 

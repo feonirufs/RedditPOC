@@ -1,17 +1,13 @@
 package app.re_eddit.domain.entity
 
-import kotlinx.serialization.Serializable
-
-@Serializable data class Post(
+data class Post(
     val title: String,
     val subredditNamePrefixed: String = "",
     val body: String,
-    val downs: Int = 0,
-    val ups: Int = 0,
-    val commentsCount: Int = 0,
-    val author: String,
-    val createdUtc: Long,
-    val created: Long,
+    val downs: String = "0",
+    val ups: String = "",
+    val commentsCount: String = "0",
+    val postInfo: String,
     val url: String,
     val thumbnail: String?,
     var after: String?

@@ -1,5 +1,6 @@
 package app.re_eddit.api.response.topic
 
+import app.re_eddit.core.ext.toDate
 import app.re_eddit.domain.entity.Post
 import com.squareup.moshi.JsonClass
 
@@ -18,18 +19,15 @@ data class TopicPostDataResponse(
     val permalink: String?
 )
 
-//Maybe that`s better be an mapper
 internal fun TopicPostDataResponse.toDomainLayer() =
     Post(
         title = title?: "",
         subredditNamePrefixed = subreddit_name_prefixed?: "",
         body = selftext?: "",
-        downs = downs,
-        ups = ups,
-        commentsCount = num_comments,
-        author = author?: "",
-        createdUtc = created_utc,
-        created = created,
+        downs = downs.toString(),
+        ups = ups.toString(),
+        commentsCount = num_comments.toString(),
+        postInfo = "u/" + author + " • " + created_utc.toDate(),
         url = "$permalink.json",
         thumbnail = url,
         after = ""

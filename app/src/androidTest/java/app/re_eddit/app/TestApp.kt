@@ -9,7 +9,7 @@ open class TestApp : MainApp() {
 
     override fun onCreate() {
         super.onCreate()
-        appComponent = TestComponent(this)
+        appComponent = TestComponent()
     }
 
     override fun appComponent(): AppComponent {

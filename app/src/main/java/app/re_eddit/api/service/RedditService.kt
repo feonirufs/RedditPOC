@@ -7,7 +7,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RedditService {
-    @GET("/r/brasil.json")
+    @GET("/r/Programming.json")
     suspend fun getTopicData(
         @Query("limit") limit: Int,
         @Query("after") after: String?

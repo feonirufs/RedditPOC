@@ -4,6 +4,7 @@ import app.re_eddit.api.response.post.CommentResponse
 import app.re_eddit.api.response.post.RedditData
 import app.re_eddit.api.response.post.RepliesResponse
 import app.re_eddit.api.response.post.ReplyResponse
+import app.re_eddit.core.ext.toDate
 import app.re_eddit.domain.entity.Comment
 import app.re_eddit.domain.entity.Post
 import app.re_eddit.domain.entity.PostFullPage
@@ -60,19 +61,18 @@ private fun List<RedditData>.toCommentList(): List<Comment> {
         } else {
             mapper[data.name!!] = 1
         }
-
     }
+    val filteredList = this.filter { it.body != null }
 
-    return this.map { it.toComment(mapper) }
+    return filteredList.map { it.toComment(mapper) }
 }
 
 private fun RedditData.toComment(hashMap: HashMap<String, Int>) = Comment(
     type = hashMap[this.name]!!,
-    author = this.author ?: "",
-    ups = this.ups,
-    downs = this.downs,
-    body = body ?: "",
-    createdUtc = created_utc ?: 0L
+    commentInfo = "u/" + this.author + " • " + this.created_utc?.toDate(),
+    ups = this.ups.toString(),
+    downs = this.downs.toString(),
+    body = body ?: ""
 )
 
 private fun RedditData.toPost() =
@@ -80,12 +80,10 @@ private fun RedditData.toPost() =
         title = title,
         subredditNamePrefixed = subreddit_name_prefixed ?: "",
         body = this.selftext ?: "",
-        downs = downs,
-        ups = ups,
-        commentsCount = num_comments ?: 0,
-        author = author ?: "",
-        createdUtc = created_utc ?: 0L,
-        created = created ?: 0L,
+        downs = downs.toString(),
+        ups = ups.toString(),
+        commentsCount = num_comments.toString(),
+        postInfo = "Posted by u/" + author + " • " + created_utc?.toDate(),
         url = "$permalink.json",
         thumbnail = url_overridden_by_dest,
         after = ""

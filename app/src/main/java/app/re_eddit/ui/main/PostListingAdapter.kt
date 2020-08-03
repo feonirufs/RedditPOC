@@ -36,11 +36,11 @@ class PostListingAdapter(private val clickCallback: (String.() -> Unit)) : Recyc
 
     inner class ViewHolder (view: View): RecyclerView.ViewHolder(view) {
         fun bind(post: Post, clickCallback: (String.() -> Unit)) {
-            itemView.user_date.text = "u/" + post.author + " . 4mo" //TODO SETUP DATE RIGHT
+            itemView.user_date.text = post.postInfo
             itemView.post_title.text = post.title
-            itemView.up_count.text = post.ups.toString()
-            itemView.down_count.text = post.downs.toString()
-            itemView.comments_count.text = post.commentsCount.toString()
+            itemView.up_count.text = post.ups
+            itemView.down_count.text = post.downs
+            itemView.comments_count.text = post.commentsCount
             itemView.setOnClickListener {
                 post.url.clickCallback()
             }

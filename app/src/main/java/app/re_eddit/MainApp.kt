@@ -12,5 +12,4 @@ open class MainApp : Application() {
     }
 
     open fun appComponent() = appComponent
-
 }

@@ -17,6 +17,7 @@ Redeployment of Reddit's Android app.
 - Kotlin Flow
 - Kotlin Serialization
 - JUnit and Espresso for tests
+- Manual DI
 
 ## Installation
 

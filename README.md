@@ -10,13 +10,13 @@ Redeployment of Reddit's Android app.
 ## Technologies
 
 - AndroidX/Jetpack
-- Standard Square buffet of OkHttp 3/Retrofit 2/Moshi
+- Standard Square buffet of Retrofit 2/Moshi
 - Google Material Design for Android
 - Kotlin Programming Language
 - Kotlin Coroutines
 - Kotlin Flow
 - Kotlin Serialization
-- JUnit and Espresso for tests
+- JUnit and Espresso
 - Manual DI
 
 ## Installation

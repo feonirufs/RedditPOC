@@ -49,16 +49,6 @@ object WebServiceFactory {
     private fun createHttpClient(logger: Interceptor): OkHttpClient {
         return OkHttpClient.Builder()
             .addInterceptor(logger)
-            .addNetworkInterceptor { chain ->
-                var request = chain.request()
-                val url = request.url
-                request = request.newBuilder()
-                    .url(url.newBuilder()
-                        .addQueryParameter("raw_json", "1") // So tokens aren't escaped
-                        .build())
-                    .build()
-                chain.proceed(request)
-            }
             .build()
     }
 }

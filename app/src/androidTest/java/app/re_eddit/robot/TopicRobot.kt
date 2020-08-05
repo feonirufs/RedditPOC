@@ -6,7 +6,7 @@ import androidx.test.espresso.assertion.ViewAssertions.matches
 import androidx.test.espresso.matcher.ViewMatchers.*
 import androidx.test.rule.ActivityTestRule
 import app.re_eddit.ui.main.PostListingActivity
-import app.re_eddit.util.RecyclerViewItemCountAssertion.Companion.hasItemCount
+import app.re_eddit.util.RecyclerViewChildrenCountAssertion.Companion.checkItemCount
 import org.hamcrest.CoreMatchers
 import org.hamcrest.CoreMatchers.not
 import app.re_eddit.R.id as Ids
@@ -50,7 +50,7 @@ class TopicRobot {
                 withId(Ids.post_recycler),
                 isDescendantOfA(withId(Ids.post_listing_root))
             )
-        ).check(hasItemCount(1))
+        ).check(checkItemCount(1))
     }
 
     fun checkIfOnlyEmptyListMessageIsShowing() = apply {

@@ -8,9 +8,9 @@ import kotlinx.coroutines.launch
 
 open class BaseViewModel : ViewModel() {
     fun launch(block: suspend CoroutineScope.() -> Unit): Job =
-        CoroutinesIdlingResource.idlingResource.increment().let {
+        ViewModelIdlingResource.idlingResource.increment().let {
             viewModelScope.launch(block = block).also {
-                it.invokeOnCompletion { CoroutinesIdlingResource.idlingResource.decrement() }
+                it.invokeOnCompletion { ViewModelIdlingResource.idlingResource.decrement() }
             }
         }
 }

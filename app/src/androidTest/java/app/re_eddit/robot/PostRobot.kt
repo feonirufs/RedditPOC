@@ -9,7 +9,7 @@ import androidx.test.rule.ActivityTestRule
 import app.re_eddit.R
 import app.re_eddit.ui.main.PostListingActivity
 import app.re_eddit.ui.post.PostActivity
-import app.re_eddit.util.RecyclerViewItemCountAssertion
+import app.re_eddit.util.RecyclerViewChildrenCountAssertion
 import org.hamcrest.CoreMatchers
 import org.hamcrest.CoreMatchers.not
 
@@ -50,7 +50,7 @@ class PostRobot {
                 ViewMatchers.withId(R.id.comments_recycler),
                 ViewMatchers.isDescendantOfA(ViewMatchers.withId(R.id.post_view_root))
             )
-        ).check(RecyclerViewItemCountAssertion.hasItemCount(8))
+        ).check(RecyclerViewChildrenCountAssertion.checkItemCount(8))
     }
 
     fun checkIfHasZeroComments() = apply {
@@ -68,7 +68,7 @@ class PostRobot {
                 ViewMatchers.withId(R.id.comments_recycler),
                 ViewMatchers.isDescendantOfA(ViewMatchers.withId(R.id.post_view_root))
             )
-        ).check(RecyclerViewItemCountAssertion.hasItemCount(0))
+        ).check(RecyclerViewChildrenCountAssertion.checkItemCount(0))
     }
 
     fun checkIfOnlyErrorMessageIsShowing() = apply {

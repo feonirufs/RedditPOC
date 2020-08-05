@@ -9,7 +9,7 @@ import app.re_eddit.FakeWebServiceFactory
 import app.re_eddit.api.service.RedditService
 import app.re_eddit.app.TestApp
 import app.re_eddit.app.di.TestComponent
-import app.re_eddit.presentation.CoroutinesIdlingResource
+import app.re_eddit.presentation.ViewModelIdlingResource
 import app.re_eddit.robot.PostRobot
 import app.re_eddit.toJson
 import okhttp3.mockwebserver.MockResponse
@@ -114,7 +114,7 @@ class PostActivityTest {
             mockWebServer = FakeWebServiceFactory.mockWebServer
             apiService = FakeWebServiceFactory.webService
 
-            IdlingRegistry.getInstance().register(CoroutinesIdlingResource.idlingResource)
+            IdlingRegistry.getInstance().register(ViewModelIdlingResource.idlingResource)
         }
 
         @AfterClass
@@ -122,7 +122,7 @@ class PostActivityTest {
         fun teardown() {
             mockWebServer.shutdown()
 
-            IdlingRegistry.getInstance().unregister(CoroutinesIdlingResource.idlingResource)
+            IdlingRegistry.getInstance().unregister(ViewModelIdlingResource.idlingResource)
         }
     }
 }

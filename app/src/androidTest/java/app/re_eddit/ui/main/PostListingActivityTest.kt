@@ -9,7 +9,7 @@ import app.re_eddit.FakeWebServiceFactory
 import app.re_eddit.api.service.RedditService
 import app.re_eddit.app.TestApp
 import app.re_eddit.app.di.TestComponent
-import app.re_eddit.presentation.CoroutinesIdlingResource
+import app.re_eddit.presentation.ViewModelIdlingResource
 import app.re_eddit.robot.TopicRobot
 import app.re_eddit.toJson
 import okhttp3.mockwebserver.MockResponse
@@ -122,14 +122,13 @@ class PostListingActivityTest {
         private lateinit var mockWebServer: MockWebServer
         private lateinit var apiService: RedditService
 
-
         @BeforeClass
         @JvmStatic
         fun setup() {
             mockWebServer = FakeWebServiceFactory.mockWebServer
             apiService = FakeWebServiceFactory.webService
 
-            IdlingRegistry.getInstance().register(CoroutinesIdlingResource.idlingResource)
+            IdlingRegistry.getInstance().register(ViewModelIdlingResource.idlingResource)
         }
 
         @AfterClass
@@ -137,7 +136,7 @@ class PostListingActivityTest {
         fun teardown() {
             mockWebServer.shutdown()
 
-            IdlingRegistry.getInstance().unregister(CoroutinesIdlingResource.idlingResource)
+            IdlingRegistry.getInstance().unregister(ViewModelIdlingResource.idlingResource)
         }
     }
 }

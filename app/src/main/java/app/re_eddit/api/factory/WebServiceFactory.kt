@@ -42,7 +42,7 @@ object WebServiceFactory {
 
     private fun createLogger(debuggable: Boolean): Interceptor {
         val logger = HttpLoggingInterceptor()
-        logger.level = if (debuggable) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE
+        logger.level = if (debuggable) HttpLoggingInterceptor.Level.BASIC else HttpLoggingInterceptor.Level.NONE
         return logger
     }
 

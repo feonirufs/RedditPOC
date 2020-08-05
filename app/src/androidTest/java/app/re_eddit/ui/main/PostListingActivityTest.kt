@@ -121,6 +121,7 @@ class PostListingActivityTest {
     companion object {
         private lateinit var mockWebServer: MockWebServer
         private lateinit var apiService: RedditService
+        private val idlingResource = ViewModelIdlingResource.idlingResource
 
         @BeforeClass
         @JvmStatic
@@ -128,7 +129,7 @@ class PostListingActivityTest {
             mockWebServer = FakeWebServiceFactory.mockWebServer
             apiService = FakeWebServiceFactory.webService
 
-            IdlingRegistry.getInstance().register(ViewModelIdlingResource.idlingResource)
+            IdlingRegistry.getInstance().register(idlingResource)
         }
 
         @AfterClass
@@ -136,7 +137,7 @@ class PostListingActivityTest {
         fun teardown() {
             mockWebServer.shutdown()
 
-            IdlingRegistry.getInstance().unregister(ViewModelIdlingResource.idlingResource)
+            IdlingRegistry.getInstance().unregister(idlingResource)
         }
     }
 }

@@ -17,7 +17,8 @@ object PostFactory {
                 postInfo = "u/Donnutz • 2020-03-17 at 14:41:21",
                 url = "/r/brasil/comments/fk9gfm/live_thread_sobre_o_corona_virus_no_brasil/.json",
                 thumbnail = "https://www.reddit.com/live/14n9hibi1rcka/",
-                after = "t3_hxlbfk"
+                after = "t3_hxlbfk",
+                isRedditMediaDomain = false
             )
         )
 
@@ -33,7 +34,8 @@ object PostFactory {
                 postInfo = "u/Donnutz • 2020-03-17 at 14:41:21",
                 url = "/r/brasil/comments/fk9gfm/live_thread_sobre_o_corona_virus_no_brasil/.json",
                 thumbnail = "https://www.reddit.com/live/14n9hibi1rcka/",
-                after = ""
+                after = "",
+                isRedditMediaDomain = false
             ),
             Post(
                 title = "Que podcasts você está ouvindo? - 24.07.2020",
@@ -45,7 +47,8 @@ object PostFactory {
                 postInfo = "u/AutoModerator • 2020-07-24 at 11:01:30",
                 url = "/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/.json",
                 thumbnail = "https://www.reddit.com/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/",
-                after = ""
+                after = "",
+                isRedditMediaDomain = false
             ),
             Post(
                 title = "Mais um dia normal por aqui.",
@@ -57,7 +60,8 @@ object PostFactory {
                 postInfo = "u/CyberAsimov • 2020-07-25 at 08:36:27",
                 url = "/r/brasil/comments/hxlbfk/mais_um_dia_normal_por_aqui/.json",
                 thumbnail = "https://v.redd.it/wig4aicdpzc51",
-                after = "t3_hxlbfk"
+                after = "t3_hxlbfk",
+                isRedditMediaDomain = false
             )
         )
 
@@ -73,7 +77,8 @@ object PostFactory {
                 postInfo = "AutoModerator",
                 url = "/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/.json",
                 thumbnail = "https://www.reddit.com/r/brasil/comments/hx2amb/que_podcasts_você_está_ouvindo_24072020/",
-                after = ""
+                after = "",
+                isRedditMediaDomain = false
             ),
             comments = listOf(
                 Comment(

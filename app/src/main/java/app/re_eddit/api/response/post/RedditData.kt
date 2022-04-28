@@ -7,6 +7,8 @@ data class RedditData(
     val ups: Int = 0,
     val downs: Int = 0,
     val url_overridden_by_dest: String?,
+    val domain: String,
+    val is_reddit_media_domain: Boolean,
     val parent_id: String? = "",
     val body: String? = "",
     val selftext: String? = "",

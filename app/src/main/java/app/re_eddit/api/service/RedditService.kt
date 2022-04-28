@@ -7,12 +7,15 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface RedditService {
-    @GET("/r/Programming.json")
+    @GET("/r/memes.json")
     suspend fun getTopicData(
         @Query("limit") limit: Int,
         @Query("after") after: String?
     ): TopicResponse
 
     @GET("{postUrl}")
-    suspend fun getSinglePostData(@Path("postUrl", encoded = true) postUrl: String, @Query("raw_json") raw_json: Int): List<CommentResponse>
+    suspend fun getSinglePostData(
+        @Path("postUrl", encoded = true) postUrl: String,
+        @Query("raw_json") raw_json: Int
+    ): List<CommentResponse>
 }

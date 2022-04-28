@@ -79,6 +79,8 @@ private fun RedditData.toPost() =
     Post(
         title = title,
         subredditNamePrefixed = subreddit_name_prefixed ?: "",
+        domain = domain,
+        isRedditMediaDomain = is_reddit_media_domain,
         body = this.selftext ?: "",
         downs = downs.toString(),
         ups = ups.toString(),

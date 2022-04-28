@@ -1,6 +1,7 @@
 package app.re_eddit.ui.main
 
 import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -21,7 +22,7 @@ class PostListingActivity : AppCompatActivity() {
     private lateinit var viewModel: TopicViewModel
 
     private val postAdapter =
-        PostListingAdapter(::onPostClicked)
+        PostListingAdapter(::onPostClicked, ::onMediaClicked)
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,19 +36,17 @@ class PostListingActivity : AppCompatActivity() {
 
     private fun initObservers() {
         viewModel.topicUiState.observe(this, Observer { state ->
-            with(state) {
-                when(this) {
-                    is UiState.Loading -> {
-                        showLoading()
-                    }
-                    is UiState.Data<*> -> {
-                        hideLoading()
-                        onNewData(posts = this.data as List<Post>)
-                    }
-                    is UiState.Error -> {
-                        hideLoading()
-                        showError(this.error)
-                    }
+            when (state) {
+                is UiState.Loading -> {
+                    showLoading()
+                }
+                is UiState.Data<*> -> {
+                    hideLoading()
+                    onNewData(posts = state.data as List<Post>)
+                }
+                is UiState.Error -> {
+                    hideLoading()
+                    showError(state.error)
                 }
             }
         })
@@ -73,12 +72,21 @@ class PostListingActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    private fun onMediaClicked(url: String) {
+        val browserIntent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(browserIntent)
+    }
+
     private fun setupPostRecycler() {
         post_recycler.run {
             layoutManager = LinearLayoutManager(context)
             adapter = postAdapter
-            addItemDecoration(MarginItemDecoration(resources.getDimension(R.dimen.recycler_post_margin).toInt()))
-            addOnScrollListener(object: RecyclerView.OnScrollListener() {
+            addItemDecoration(
+                MarginItemDecoration(
+                    resources.getDimension(R.dimen.recycler_post_margin).toInt()
+                )
+            )
+            addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
                     super.onScrollStateChanged(recyclerView, newState)
                     if (!recyclerView.canScrollVertically(1)) {

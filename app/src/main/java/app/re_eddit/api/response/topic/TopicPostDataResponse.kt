@@ -8,6 +8,8 @@ import com.squareup.moshi.JsonClass
 data class TopicPostDataResponse(
     val title: String? = "",
     val subreddit_name_prefixed: String? = "",
+    val domain: String,
+    val is_reddit_media_domain: Boolean,
     val url: String?,
     val selftext: String?,
     val downs: Int = 0,
@@ -21,9 +23,11 @@ data class TopicPostDataResponse(
 
 internal fun TopicPostDataResponse.toDomainLayer() =
     Post(
-        title = title?: "",
-        subredditNamePrefixed = subreddit_name_prefixed?: "",
-        body = selftext?: "",
+        title = title ?: "",
+        subredditNamePrefixed = subreddit_name_prefixed ?: "",
+        domain = domain,
+        isRedditMediaDomain = is_reddit_media_domain,
+        body = selftext ?: "",
         downs = downs.toString(),
         ups = ups.toString(),
         commentsCount = num_comments.toString(),

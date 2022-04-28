@@ -3,6 +3,8 @@ package app.re_eddit.domain.entity
 data class Post(
     val title: String,
     val subredditNamePrefixed: String = "",
+    val domain: String = "",
+    val isRedditMediaDomain: Boolean,
     val body: String,
     val downs: String = "0",
     val ups: String = "",

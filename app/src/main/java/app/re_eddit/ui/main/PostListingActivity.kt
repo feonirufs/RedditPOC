@@ -56,12 +56,12 @@ class PostListingActivity : AppCompatActivity() {
 
     private fun onNewData(posts: List<Post>) {
         if (posts.isEmpty()) {
-            post_recycler.visibility = View.GONE
             error_text.visibility = View.VISIBLE
+            post_recycler.visibility = View.GONE
         } else {
             postAdapter.updatePosts(posts)
-            error_text.visibility = View.GONE
             post_recycler.visibility = View.VISIBLE
+            error_text.visibility = View.GONE
         }
     }
 

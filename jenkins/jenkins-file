@@ -5,6 +5,7 @@ pipeline {
         stage('Compile') {
             steps {
                     // Compile the app and its dependencies
+                    bat './gradlew clean'
                     bat './gradlew assembleDebug'
             }
         }
